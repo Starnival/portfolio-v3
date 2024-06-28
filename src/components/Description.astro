@@ -1,0 +1,25 @@
+---
+import { basics } from '../content/resume/resume.json';
+
+interface Basics {
+    name: string;
+    summary: string;
+}
+
+const { name } = basics;
+---
+
+<article>
+    <h1>{name}</h1>
+    <h2>Developer</h2>
+</article>
+
+
+<style>
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+</style>

@@ -1,0 +1,25 @@
+---
+import Image from 'astro/components/Image.astro';
+import { basics } from '../content/resume/resume.json';
+
+const { image } = basics;
+---
+
+<Image
+    src={image}
+    alt="Josue Noriega"
+    width="200"
+    height="200"
+    format="webp"
+    quality={100}
+    loading="eager"
+    fetchpriority="high"
+    class="profile-image"
+/>
+
+
+<style>
+    .profile-image {
+        border-radius: 1rem;
+    }
+</style>

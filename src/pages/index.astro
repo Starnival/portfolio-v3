@@ -1,0 +1,99 @@
+---
+import About from "../components/About.astro";
+import Description from "../components/Description.astro";
+import Profile from "../components/Profile.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<section class="container description">
+			<Description />
+		</section>
+
+		<section class="profile">
+			<Profile />
+		</section>
+
+		<section class="container about">
+			<About title="About"/>
+		</section>
+
+		<section class="container contacts">Contacts</section>
+
+		<section class="container experience">Experience</section>
+
+		<section class="container projects">Projects</section>
+
+		<section class="container skills">Skills</section>
+
+		<section class="container curriculum">Curriculum</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		display: grid;
+		grid-template-columns: repeat(5, minmax(0, 1fr));
+		gap: 1rem;
+		
+	}
+
+	.container {
+		display: grid;
+		background-color: #1a1a1a;
+		color: #cfd4d9;
+	}
+
+	.container:hover {
+		background-color: #13151a;
+	}
+
+	.description {
+		grid-column: span 3 / span 3;
+		grid-column-start: 2;
+		grid-row-start: 1;
+	}
+
+	.profile {
+		grid-column-start: 5;
+		grid-row: span 3 / span 3;
+		grid-row-start: 1;
+	}
+
+	.about {
+		grid-column-start: 1;
+		grid-row: span 3 / span 3;
+		grid-row-start: 1;
+	}
+
+	.contacts {
+		grid-column-start: 5;
+		grid-row: span 3 / span 3;
+		grid-row-start: 4;
+	}
+
+	.experience {
+		grid-column-start: 1;
+		grid-row: span 4 / span 4;
+		grid-row-start: 4;
+	}
+
+	.projects {
+		grid-column: span 3 / span 3;
+		grid-column-start: 2;
+		grid-row: span 5 / span 5;
+		grid-row-start: 2;
+	}
+
+	.skills {
+		grid-column: span 3 / span 3;
+		grid-column-start: 2;
+		grid-row-start: 7;
+	}
+
+	.curriculum {
+		grid-column-start: 5;
+		grid-row-start: 7;
+	}
+</style>

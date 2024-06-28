@@ -1,0 +1,18 @@
+---
+import { basics } from '../content/resume/resume.json';
+
+interface Basics {
+    summary: string;
+}
+interface Props {
+    title?: string;
+}
+
+const { summary } = basics;
+const { title } = Astro.props;
+---
+
+<article>
+    <h2>{title}</h2>
+    <p>{summary}</p>
+</article>
